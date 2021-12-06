@@ -40,15 +40,26 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <goals>install</goals>
+                    <localCheckout>true</localCheckout>
+                    <pushChanges>false</pushChanges>
+                    <preparationGoals>validate</preparationGoals>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>pom.xml</checkModificationExclude>
+                        <checkModificationExclude>**</checkModificationExclude>
+                    </checkModificationExcludes>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <scm>
+       <url>https://github.com/salahuddin09/spring-pet-clinic</url>
         <connection>scm:git:https://github.com/salahuddin09/spring-pet-clinic.git</connection>
-        <url>https://github.com/salahuddin09/spring-pet-clinic</url>
-        <developerConnection>scm:git:https://github.com/salahuddin09/spring-pet-clinic.git</developerConnection>
+        <developerConnection>
+            <!-- scm:git:https://github.com/salahuddin09/spring-pet-clinic.git -->
+              scm:git:git@github.com:salahuddin09/spring-pet-clinic.git
+        </developerConnection>
+         <tag>spring-pet-clinic-0.0.1</tag>
     </scm>
 
 </project>
